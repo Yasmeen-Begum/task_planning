@@ -3,7 +3,7 @@
 import os
 import requests
 
-EXA_API_KEY = os.getenv("EXA_API_KEY", "472e124c-2957-4d85-bf85-673fd148b1d6")
+EXA_API_KEY = os.getenv("EXA_API_KEY")
 EXA_SEARCH_URL = os.getenv("EXA_SEARCH_URL", "https://api.exa.ai/search")
 
 def enrich_with_places(task: str, num_results: int = 3):
@@ -58,3 +58,4 @@ def enrich_with_places(task: str, num_results: int = 3):
         return [f"Error fetching info for '{task}': network error ({re})"]
     except Exception as e:
         return [f"Error fetching info for '{task}': {str(e)}"]
+
