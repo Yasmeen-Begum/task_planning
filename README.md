@@ -1,0 +1,127 @@
+# 🧠 AI Task Planner
+
+An interactive **Streamlit app** that generates structured daily plans for any goal (travel itineraries, workout routines, study schedules, etc.).  
+Plans are stored in a local database so you can view them later.
+
+---
+
+## ⚙️ How It Works
+
+1. Enter a **goal** (e.g., “Plan a 2-day vegetarian food tour in Hyderabad” or “Make a 3-day beginner workout plan”).
+2. The app uses an **AI planning agent** to generate a structured plan.
+3. Plans are displayed with **tasks, places, and weather context** (if relevant).
+4. Each plan is **saved in SQLite** and can be revisited later.
+
+### 📝 Simple Diagram
+
+```
+[ User Goal ] 
+     │
+     ▼
+[ AI Planner Agent ] → Calls Web Search API (optional for weather/places)
+     │
+     ▼
+[ Structured Plan JSON ]
+     │
+     ▼
+[ Streamlit UI ]  ↔  [ SQLite DB (History) ]
+```
+
+---
+
+## 🚀 Setup & Run Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/task-planner.git
+cd task-planner
+```
+
+### 2. Create a virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add your API keys  
+- Create a `.env` file in the project root:  
+```env
+OPENAI_API_KEY=your_openai_key_here
+WEBSEARCH_API_KEY=your_websearch_api_key_here
+```
+
+### 5. Run the app
+```bash
+streamlit run app.py
+```
+
+Open [http://localhost:8501](http://localhost:8501) in your browser 🎉
+
+---
+
+## 🧾 Example Goals & Plans
+
+### Example 1: Food Tour
+**Goal:** *Plan a 2-day vegetarian food tour in Hyderabad*  
+**Generated Plan:**
+```json
+[
+  {
+    "day": 1,
+    "task": "Breakfast at Chutneys, visit Shadab for lunch, evening snacks at Pragati Idli",
+    "places": ["Chutneys", "Hotel Shadab", "Pragati Idli"],
+    "weather": "Sunny, 32°C"
+  },
+  {
+    "day": 2,
+    "task": "Try Govind Dosa, lunch at Taj Mahal Hotel, sweets at Almond House",
+    "places": ["Govind Dosa", "Taj Mahal Hotel", "Almond House"],
+    "weather": "Partly cloudy, 30°C"
+  }
+]
+```
+
+---
+
+### Example 2: Workout Plan
+**Goal:** *Make a 3-day beginner workout plan*  
+**Generated Plan:**
+```json
+[
+  {
+    "day": 1,
+    "task": "Push (Chest/Triceps/Shoulders): Bench Press, Overhead Press, Dips, Lateral Raises",
+    "places": null,
+    "weather": null
+  },
+  {
+    "day": 2,
+    "task": "Pull (Back/Biceps): Deadlift, Pull-ups, Barbell Row, Bicep Curls",
+    "places": null,
+    "weather": null
+  },
+  {
+    "day": 3,
+    "task": "Legs (Quads/Hamstrings/Calves): Squats, Lunges, Leg Press, Calf Raises",
+    "places": null,
+    "weather": null
+  }
+]
+```
+
+---
+
+## 📜 Disclosure of AI Assistance
+
+This project was built with assistance from **AI (OpenAI’s GPT-5 via ChatGPT)** for:
+- Writing parts of the `app.py` and planner agent logic.  
+- Debugging errors (`NoneType` handling for places/weather).  
+- Drafting this README.  
+
+All code was reviewed, tested, and adapted manually.
