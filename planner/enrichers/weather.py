@@ -3,7 +3,7 @@ import os
 import requests
 
 # Use environment variable if available (recommended), otherwise fallback to provided key.
-OPENWEATHER_KEY = os.getenv("OPENWEATHER_KEY", "d73576703f295e340b8725848ed7b171")
+OPENWEATHER_KEY = os.getenv("OPENWEATHER_KEY")
 
 def get_weather_forecast(city: str, day_offset: int = 0):
     """
@@ -41,3 +41,4 @@ def get_weather_forecast(city: str, day_offset: int = 0):
     except Exception as e:
         # catch-all so UI doesn't crash; return useful message
         return f"Weather unavailable for {city}: {str(e)}"
+
