@@ -70,6 +70,13 @@ Open [http://localhost:8501](http://localhost:8501) in your browser 🎉
 This project was built with assistance from **AI (OpenAI’s GPT-5 via ChatGPT)** for:
 - Writing parts of the `app.py` and planner agent logic.  
 - Debugging errors (`NoneType` handling for places/weather).  
-- Drafting this README.  
+- Drafting this README.
+
+---
+
+## 🎥 Demo Recording
+
+Click here to view the demo recording: [video.mp4](video.mp4)
+
 
 All code was reviewed, tested, and adapted manually.
