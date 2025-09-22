@@ -63,59 +63,7 @@ streamlit run app.py
 
 Open [http://localhost:8501](http://localhost:8501) in your browser 🎉
 
----
 
-## 🧾 Example Goals & Plans
-
-### Example 1: Food Tour
-**Goal:** *Plan a 2-day vegetarian food tour in Hyderabad*  
-**Generated Plan:**
-```json
-[
-  {
-    "day": 1,
-    "task": "Breakfast at Chutneys, visit Shadab for lunch, evening snacks at Pragati Idli",
-    "places": ["Chutneys", "Hotel Shadab", "Pragati Idli"],
-    "weather": "Sunny, 32°C"
-  },
-  {
-    "day": 2,
-    "task": "Try Govind Dosa, lunch at Taj Mahal Hotel, sweets at Almond House",
-    "places": ["Govind Dosa", "Taj Mahal Hotel", "Almond House"],
-    "weather": "Partly cloudy, 30°C"
-  }
-]
-```
-
----
-
-### Example 2: Workout Plan
-**Goal:** *Make a 3-day beginner workout plan*  
-**Generated Plan:**
-```json
-[
-  {
-    "day": 1,
-    "task": "Push (Chest/Triceps/Shoulders): Bench Press, Overhead Press, Dips, Lateral Raises",
-    "places": null,
-    "weather": null
-  },
-  {
-    "day": 2,
-    "task": "Pull (Back/Biceps): Deadlift, Pull-ups, Barbell Row, Bicep Curls",
-    "places": null,
-    "weather": null
-  },
-  {
-    "day": 3,
-    "task": "Legs (Quads/Hamstrings/Calves): Squats, Lunges, Leg Press, Calf Raises",
-    "places": null,
-    "weather": null
-  }
-]
-```
-
----
 
 ## 📜 Disclosure of AI Assistance
 
